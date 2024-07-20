@@ -3,7 +3,6 @@ The <b>Viola-Jones Object Detection Framework</b>, developed by Paul Viola and M
 
 Viola–Jones is essentially a boosted feature learning algorithm trained by running a modified AdaBoost algorithm on Haar feature classifiers to find a sequence of classifiers <i>f<sub>1</sub>, f<sub>2</sub>, ..., f<sub>n</sub></i>. Haar feature classifiers, while simple, allow for very fast computation. The modified AdaBoost algorithm constructs a strong classifier by combining many weak classifiers, enabling accurate and efficient object detection.
 
-<h2>Core Components</h2>
 The framework consists of several key components that work together to achieve efficient and accurate object detection:
 <ol>
   <li>Selecting Haar-like features</li>
@@ -11,6 +10,8 @@ The framework consists of several key components that work together to achieve e
   <li>Running AdaBoost training</li>
   <li>Creating classifier cascades</li>
 </ol>
+<h2>Core Components</h2>
+
 
 <h2>References</h2>
 <ol>
