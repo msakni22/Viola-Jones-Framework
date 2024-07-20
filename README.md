@@ -19,8 +19,8 @@ There are many types of haar-like features. Some of them are:
 <li>Center features</li>
 <li>Four rectangle features</li>
 </ul>
-<img src="https://iq.opengenus.org/content/images/2019/08/HAAR.PNG"/>
-<img src="https://qph.cf2.quoracdn.net/main-qimg-f14c8b76756db356a4f168d3a998a061-pjlq" />
+<img src="images/haar.PNG"/>
+<img src="images/haar.jfif" />
 <h2>References</h2>
 <ol>
   <li>Viola, Paul, and Michael Jones. "Rapid object detection using a boosted cascade of simple features." Proceedings of the 2001 IEEE computer society conference on computer vision and pattern recognition. CVPR 2001. Vol. 1. Ieee, 2001.</li>
