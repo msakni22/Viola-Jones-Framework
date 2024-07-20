@@ -10,7 +10,7 @@ The framework consists of several key components that work together to achieve e
   <li>Running AdaBoost training</li>
   <li>Creating classifier cascades</li>
 </ol>
-<h2>Core Components</h2>
+<h2>Selecting Haar-like features</h2>
 
 
 <h2>References</h2>
