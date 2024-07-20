@@ -4,4 +4,5 @@ The <b>Viola-Jones Object Detection Framework</b>, developed by Paul Viola and M
 <h2>References</h2>
 <enumerate>
   <item>Viola, Paul, and Michael Jones. "Rapid object detection using a boosted cascade of simple features." Proceedings of the 2001 IEEE computer society conference on computer vision and pattern recognition. CVPR 2001. Vol. 1. Ieee, 2001.</item>
+  <item>Viola, Paul, and Michael J. Jones. "Robust real-time face detection." International journal of computer vision 57 (2004): 137-154.</item>
 </enumerate>
