@@ -11,8 +11,14 @@ The framework consists of several key components that work together to achieve e
   <li>Creating classifier cascades</li>
 </ol>
 <h3>1. Selecting Haar-like features</h3>
-
-
+Haar-like features, named for their similarity to 2D Haar wavelets, are essential components of the Viola-Jones object detection algorithm. These features use simple rectangular patterns to detect structural components of objects such as edges, lines, and textures. Applied to various sub-windows of the image, they evaluate the presence of specific patterns crucial for object recognition. 
+There are many types of haar-like features. Some of them are:
+<ul>
+<li>Edge features</li>
+<li>Line features</li>
+<li>Center features</li>
+<li>Four rectangle features</li>
+</ul>
 <h2>References</h2>
 <ol>
   <li>Viola, Paul, and Michael Jones. "Rapid object detection using a boosted cascade of simple features." Proceedings of the 2001 IEEE computer society conference on computer vision and pattern recognition. CVPR 2001. Vol. 1. Ieee, 2001.</li>
