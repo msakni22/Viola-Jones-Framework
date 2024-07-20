@@ -19,7 +19,7 @@ There are many types of haar-like features. Some of them are:
 <li>Center features</li>
 <li>Four rectangle features</li>
 </ul>
-<img src="images/haar.PNG"/>
+<img src="images/haar.png"/>
 <img src="images/haar.jfif" />
 <h2>References</h2>
 <ol>
