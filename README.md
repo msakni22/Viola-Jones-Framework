@@ -114,7 +114,7 @@ The sum of pixels in the rectangle ABCD can be obtained using values of points A
 
 However, how do we determine the best features that represent an object from the hundreds of thousands of Haar features? This problem is solved by using <b>AdaBoost</b> (Adaptive Boosting).
 
-<h3 id="ss3">AdaBoost learning algorithm</h3>
+<h3 id="ss3">3. AdaBoost learning algorithm</h3>
 AdaBoost is a type of ensemble technique (Boosting) in  Machine Learning which combines a set of weak learners to form a strong learner.
 <h2>References</h2>
 <ol>
