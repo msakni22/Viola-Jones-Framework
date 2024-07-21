@@ -46,7 +46,7 @@ For example, We can see in the image below that there is an edge formation near 
 
 <img src="images/apply_haar.jfif" height=300px />
 
-After detecting features using Haar-like features, it is crucial to evaluate their effectiveness. This involves calculating the feature value by subtracting the sum of pixel values in the black region from the sum of pixel values in the white region. If the feature value is close to the expected value (e.g., near 1), it indicates a strong presence of the property being detected.<br>
+After detecting features using Haar-like features, it is crucial to evaluate their effectiveness. This involves calculating the feature value by subtracting the sum of pixel values in the black region from the sum of pixel values in the white region. If the feature value is close to the expected value (near 1), it indicates a strong presence of the property being detected. For a uniform surface(e.g., a wall) this value will be close to zero and won't provide any significant information.<br>
 
 $Feature\textunderscore Value = (\sum Pixel\textunderscore White\textunderscore Region - \sum Pixel\textunderscore Black\textunderscore Region) / Number\textunderscore of\textunderscore Pixel$
 
