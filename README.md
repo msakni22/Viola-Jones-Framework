@@ -30,9 +30,12 @@ There are several types of Haar-like features, including:
 <img src="images/haar.png" height=300px />
 <img src="images/haar.jfif" height=300px />
 
-For example, human faces share several common attributes, such as the eye region being darker than the bridge of the nose, and cheeks being brighter than the eye region.
+For example, human faces share several common attributes, such as the eye region being darker than the bridge of the nose, and cheeks being brighter than the eye region. Similarly, every part of the face can be represented as haar like a feature considering their generic patterns.
 
+A haar-like feature will be represented as a matrix where all white-colored pixels will be represented as 0 and black-colored pixels will be represented as 1.
+By summing the pixel values of different regions and comparing them, the algorithm can effectively identify areas where these attributes hold true.
 <img src="images/human.jfif" height=300px />
+For instance, the sum of pixel values in a darker region will be smaller than in a lighter region, which can be used to detect specific facial features.
 
 
 <h2>References</h2>
