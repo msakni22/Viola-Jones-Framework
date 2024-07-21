@@ -39,7 +39,7 @@ By summing the pixel values of different regions and comparing them, the algorit
 
 For instance, the sum of pixel values in a darker region will be smaller than in a lighter region, which can be used to detect specific facial features.<br>
 
-For example, We can see that there is an edge formation near the nose to cheek part. The intensity becomes larger when it comes from left to right.<br>
+For example, We can see, in the image below, that there is an edge formation near the nose to cheek part. The intensity becomes larger when it comes from left to right.<br>
 
 <img src="images/apply_haar.jfif" height=300px />
 
