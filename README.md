@@ -48,10 +48,10 @@ After detecting features using Haar-like features, it is crucial to evaluate the
 
 $Feature\textunderscore Value = (\sum Pixel\textunderscore White\textunderscore Region - \sum Pixel\textunderscore Black\textunderscore Region) / Number\textunderscore of\textunderscore Pixel$
 
-In our example, the sum of pixel values in the black region and the white region:
-$B = 0.6+0.8+0.8+0.6+0.6+0.8+0.8+0.9=5.9$
-$W = 0.1+0.2+0.2+0.3+0.2+0.1+0.2+0.1=1.4$
-$Metric = (B - W)/8 = (5.9-1.4)/8 = 0.56$
+In our example, the sum of pixel values in the black region and the white region:<br>
+$B = 0.6+0.8+0.8+0.6+0.6+0.8+0.8+0.9=5.9$<br>
+$W = 0.1+0.2+0.2+0.3+0.2+0.1+0.2+0.1=1.4$<br>
+$Metric = (B - W)/8 = (5.9-1.4)/8 = 0.56$<br>
 Therefore, we can infer that there is a 56% probability of detecting the Haar-like feature in the specific area of the image.
 
 The Viola-Jones algorithm calculates many such features across multiple subregions of an image, making the process computationally intensive. To address this, the algorithm employs the concept of <b>Integral Images</b>, which allows for rapid calculation of these features.
