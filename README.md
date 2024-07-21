@@ -40,9 +40,13 @@ By summing the pixel values of different regions and comparing them, the algorit
 
 For instance, the sum of pixel values in a darker region will be smaller than in a lighter region, which can be used to detect specific facial features.<br>
 
-For example, We can see, in the image below, that there is an edge formation near the nose to cheek part. The intensity becomes larger when it comes from left to right.<br>
+For example, We can see in the image below that there is an edge formation near the nose to cheek part. The intensity becomes larger when it comes from left to right.<br>
 
 <img src="images/apply_haar.jfif" height=300px />
+
+After detecting an object using Haar-like features, it is crucial to evaluate the model to assess its accuracy. The evaluation involves calculating the feature value by subtracting the sum of pixel values in the black region from the sum of pixel values in the white region.
+
+<code>Feature Value = (Sum of Pixel Values in White Region - Sum of Pixel Values in Black Region) / Total Sum of Pixel Values</code>
 
 
 
