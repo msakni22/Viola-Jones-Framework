@@ -93,8 +93,8 @@ If we do the same for the other type of Haar features, which leads to over more 
 
 An integral image gives a fast and simple way to calculate the value of any haar-like feature. Instead of computing at every pixel, it instead creates sub-rectangles and creates array references for each of those sub-rectangles. These are then used to compute the Haar features. The value for location (x, y) on the integral image is the sum of the pixels above and to the left of the (x, y) on the original image plus itself.
 
-For example, from below to calculate the (2,2) = 16: 1+3+12+4 = 20.
-<img src="images/integral.png" height=200px/>
+For example, from below to calculate the (2,2) = 16: 1+3+12+4 = 20.<br>
+<img src="images/integral.png" height=250px/><br>
 
 <h2>References</h2>
 <ol>
