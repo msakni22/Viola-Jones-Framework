@@ -31,7 +31,7 @@ There are several types of Haar-like features, including:
 <img src="images/haar.jfif" height=300px/>
 
 For example, human faces share several common attributes, such as the eye region being darker than the bridge of the nose, and cheeks being brighter than the eye region.
-
+<img src="images/human.jfif" height=300px/>
 
 
 
