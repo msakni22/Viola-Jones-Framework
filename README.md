@@ -25,8 +25,8 @@ There are several types of Haar-like features, including:
 <ul>
   <li>Edge features</li>
   <li>Line features</li>
-  <li>Center features</li>
   <li>Four rectangle features</li>
+  <li>Center features</li>
 </ul>
 <img src="images/haar.png" height=300px />
 <img src="images/haar.jfif" height=300px />
