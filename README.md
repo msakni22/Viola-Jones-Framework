@@ -65,12 +65,11 @@ This process is repeated across multiple locations and sizes, allowing the detec
 The Viola-Jones algorithm calculates many such features across multiple subregions of an image, making the process computationally intensive. To address this, the algorithm employs the concept of <b>Integral Images</b>, which allows for rapid calculation of these features.
 
 <h3>2. Integral image</h3>
-Let's assume an image size of 24 × 24 pixels (as used in the <a href="#ref2">paper</a>) a horizontal two-rectangle feature can have the following 12 valid sizes given a pixel wide window: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22 and 24. Since the feature is of height 1, there are 24 possible combinations for the height without violating symmetry. 
-However, given that we also have to position the feature, not all positions are valid:
+Consider an image of size 24 × 24 pixels (as used in the original <a href="ref1">paper</a>). For a horizontal two-rectangle feature, there are 12 possible valid widths for a pixel-wide window: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, and 24. Given that the feature height is 1 pixel, there are 24 possible positions for this height without violating symmetry. However, not all positions are valid when considering the feature’s placement.
 <ul>
-  <li>A 2 pixel feature can be positioned at $x$ coordinates $0...22$ , resulting in 23 possible combinations.</li>
-  <li>A 24 pixel feature can be only positioned at $x$ coordinate $0$, resulting in 1 possible combination.</li>
-  <li>A 22 pixel feature can be positioned at $x$ coordinates $0, 1, 2$, resulting in 3 possible combinations.</li>
+  <li>A 2-pixel wide feature can be positioned at 23 different coordinates.</li>
+  <li>A 24-pixel wide feature can be positioned at only 1 coordinate.</li>
+  <li>A 22-pixel wide feature can be positioned at 3 different coordinates.</li>
 </ul>
 This yields<br>
 
