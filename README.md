@@ -3,7 +3,7 @@
 
 Viola–Jones is essentially a <b>boosted feature learning algorithm</b> trained by running a modified <b>AdaBoost</b> algorithm on <b>Haar feature classifiers</b> to find a sequence of classifiers <i>f<sub>1</sub>, f<sub>2</sub>, ..., f<sub>n</sub></i>.<br>
 
-The framework consists of four main steps which are mainly:
+The framework consists of four main steps which are mainly:<br>
 <ol>
   <li>Selecting Haar-like features</li>
   <li>Creating an Integral image</li>
