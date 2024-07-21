@@ -27,13 +27,12 @@ There are several types of Haar-like features, including:
   <li>Center features</li>
   <li>Four rectangle features</li>
 </ul>
-<img src="images/haar.png" height=300px/>
-<img src="images/haar.jfif" height=300px/>
+<img src="images/haar.png" height=300px />
+<img src="images/haar.jfif" height=300px />
 
 For example, human faces share several common attributes, such as the eye region being darker than the bridge of the nose, and cheeks being brighter than the eye region.
-<img src="images/human.jfif" height=300px/>
 
-
+<img src="images/human.jfif" height=300px />
 
 
 <h2>References</h2>
