@@ -1,4 +1,19 @@
-# Viola-Jones-Framework
+# Viola Jones Framework
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#s1">Viola Jones Framework</a> (explained)
+  <ol>
+    <li><a href="#ss1">Haar-like features</a></li>
+    <li><a href="#ss2">Integral image</a></li>
+    <li><a href="#ss3">AdaBoost Learning Algorithm</a></li>
+    <li><a href="#ss4">Cascade Classifier</a></li>
+  </ol>
+  </li>
+  <li><a href=""></a></li>
+</ul>
+
+<h2 id="s1">Viola Jones Framework</h2>
 <p>The <b>Viola-Jones Object Detection Framework</b>, developed by <b>Paul Viola</b> and <b>Michael Jones</b> in <a href="#ref1">2001</a>, is an innovative machine learning algorithm specifically designed for fast, accurate face detection. It was primarily motivated by the problem of face detection, although it can be adapted to detect other classes of objects. <br> Training the framework is relatively slow, but it enables objects to be detected quickly and accurately. In fact, it can detect human faces very effectively, and in real time.<br></p>
 
 Viola–Jones is essentially a <b>boosted feature learning algorithm</b> trained by running a modified <b>AdaBoost</b> algorithm on <b>Haar feature classifiers</b> to find a sequence of classifiers <i>f<sub>1</sub>, f<sub>2</sub>, ..., f<sub>n</sub></i>.<br>
@@ -10,7 +25,7 @@ The framework consists of four key components that work together to achieve effi
   <li>AdaBoost Learning Algorithm</li>
   <li>Cascade Classifier</li>
 </ol>
-<h3>1. Haar-like features</h3>
+<h3 id="ss1">1. Haar-like features</h3>
 Most images contain universally similar patterns recognizable from a human perspective.<br>
 For example:
 <ul>
