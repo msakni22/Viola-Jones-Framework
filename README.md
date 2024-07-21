@@ -44,14 +44,19 @@ For example, We can see in the image below that there is an edge formation near 
 
 <img src="images/apply_haar.jfif" height=300px />
 
-After detecting an object using Haar-like features, it is crucial to evaluate the model to assess its accuracy. The evaluation involves calculating the feature value by subtracting the sum of pixel values in the black region from the sum of pixel values in the white region.
+After detecting features using Haar-like features, it is crucial to evaluate their effectiveness. This involves calculating the feature value by subtracting the sum of pixel values in the black region from the sum of pixel values in the white region. If the feature value is close to the expected value (e.g., near 1), it indicates a strong presence of the property being detected.<br>
 
 $Feature\textunderscore Value = (\sum Pixel\textunderscore White\textunderscore Region - \sum Pixel\textunderscore Black\textunderscore Region) / Number\textunderscore of\textunderscore Pixel$
 
+In our example, the sum of pixel values in the black region and the white region:
+$B = 0.6+0.8+0.8+0.6+0.6+0.8+0.8+0.9=5.9$
+$W = 0.1+0.2+0.2+0.3+0.2+0.1+0.2+0.1=1.4$
+$Metric = (B - W)/8 = (5.9-1.4)/8 = 0.56$
+Therefore, we can infer that there is a 56% probability of detecting the Haar-like feature in the specific area of the image.
 
+The Viola-Jones algorithm calculates many such features across multiple subregions of an image, making the process computationally intensive. To address this, the algorithm employs the concept of <b>Integral Images</b>, which allows for rapid calculation of these features.
 
-The Viola-Jones algorithm calculates many such features across multiple subregions of an image, making the process computationally intensive. To address this, the algorithm employs the concept of Integral Images, which allows for rapid calculation of these features.
-
+<h3>2. Creating an Integral image</h3>
 <h2>References</h2>
 <ol>
   <li id="ref1">Viola, Paul, and Michael Jones. "Rapid object detection using a boosted cascade of simple features." Proceedings of the 2001 IEEE computer society conference on computer vision and pattern recognition. CVPR 2001. Vol. 1. Ieee, 2001.</li>
