@@ -46,7 +46,7 @@ For example, We can see in the image below that there is an edge formation near 
 
 <img src="images/apply_haar.jfif" height=300px />
 
-Each haar feature is applied to different locations and sizes within all images. By sliding these rectangular windows over various positions and scales of the image, the algorithm computes feature values based on the intensity differences between the regions. This involves subtracting the sum of pixel values in the black region from the sum of pixel values in the white region. If the feature value is close to the expected value (near 1), it indicates a strong presence of the property being detected. For a uniform surface(e.g., a wall) this value will be close to zero and won't provide any significant information.<br>
+After detecting an object using Haar-like features, it is crucial to evaluate the model to assess its accuracy. This involves subtracting the sum of pixel values in the black region from the sum of pixel values in the white region. If the feature value is close to the expected value (near 1), it indicates a strong presence of the property being detected. For a uniform surface(e.g., a wall) this value will be close to zero and won't provide any significant information.<br>
 
 $Feature\textunderscore Value = (\sum Pixel\textunderscore White\textunderscore Region - \sum Pixel\textunderscore Black\textunderscore Region) / Number\textunderscore of\textunderscore Pixel$
 
@@ -56,9 +56,11 @@ $W = 0.1+0.2+0.2+0.3+0.2+0.1+0.2+0.1=1.4$<br>
 $Metric = (B - W)/8 = (5.9-1.4)/8 = 0.56$<br>
 Therefore, we can infer that there is a 56% probability of detecting the Haar-like feature in the specific area of the image.
 
+Each haar feature type is applied to different locations and sizes within all images. By sliding these rectangular windows over various positions and scales of the image, the algorithm computes feature values based on the intensity differences between the regions. 
+
 This process is repeated across multiple locations and sizes, allowing the detection of features with varying scales and orientations, which helps in recognizing patterns and structures crucial for object detection.
 
-
+<img src="images/examples.jfif" height=600px />
 
 The Viola-Jones algorithm calculates many such features across multiple subregions of an image, making the process computationally intensive. To address this, the algorithm employs the concept of <b>Integral Images</b>, which allows for rapid calculation of these features.
 
