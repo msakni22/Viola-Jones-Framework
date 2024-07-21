@@ -58,7 +58,7 @@ Therefore, we can infer that there is a 56% probability of detecting the Haar-li
 
 The Viola-Jones algorithm calculates many such features across multiple subregions of an image, making the process computationally intensive. To address this, the algorithm employs the concept of <b>Integral Images</b>, which allows for rapid calculation of these features.
 
-<h3>2. Creating an Integral image</h3>
+<h3>2. Integral image</h3>
 <h2>References</h2>
 <ol>
   <li id="ref1">Viola, Paul, and Michael Jones. "Rapid object detection using a boosted cascade of simple features." Proceedings of the 2001 IEEE computer society conference on computer vision and pattern recognition. CVPR 2001. Vol. 1. Ieee, 2001.</li>
