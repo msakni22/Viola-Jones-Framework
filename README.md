@@ -11,7 +11,8 @@ The framework consists of four main steps which are mainly:
   <li>Creating classifier cascades</li>
 </ol>
 <h3>1. Selecting Haar-like features</h3>
-Most images contain universally similar patterns recognizable from a human perspective. For example:<br>
+Most images contain universally similar patterns recognizable from a human perspective. For example:
+
 <ul>
   <li>Human Faces: Common patterns include eyes, nose, cheeks, and mouth.</li>
   <li>Four-Wheeler Vehicles: Recognizable patterns include wheels, doors, and steering wheels.</li>
