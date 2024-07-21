@@ -67,28 +67,23 @@ The Viola-Jones algorithm calculates many such features across multiple subregio
 <h3>2. Integral image</h3>
 Consider an image of size 24 × 24 pixels (as used in the original <a href="ref1">paper</a>). For a horizontal two-rectangle feature, there are 12 possible valid widths for a pixel-wide window: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, and 24. Given that the feature height is 1 pixel, there are 24 possible positions for this height without violating symmetry. However, not all positions are valid when considering the feature’s placement.
 <ul>
-  <li>A 2-pixel wide feature can be positioned at 23 different coordinates.</li>
-  <li>A 24-pixel wide feature can be positioned at only 1 coordinate.</li>
-  <li>A 22-pixel wide feature can be positioned at 3 different coordinates.</li>
+  <li>A 2-pixel wide feature can be positioned at 23 different coordinates (23 possible positions).</li>
+  <li>A 24-pixel wide feature can be positioned at only 1 coordinate (1 possible position).</li>
+  <li>A 22-pixel wide feature can be positioned at 3 different coordinates (3 possible positions).</li>
 </ul>
-This yields<br>
 
+we can calculate the possible combinations as follows:
 $n_{x}(width_{feature}) = width_{window} - width_{feature} + 1$ <br>
-
-possible combinations for a specific $width_{feature}$, giving<br>
+Therefore, the total number of possible combinations for a specific $width_{feature}$, giving<br>
 $N_{x,2h} = n_{x}(2) + n_{x}(4) + n_{x}(6) + ... + n_{x}(24)$<br>
-$=23 + 21 + 19 ... + 1$<br>
-$= 144$<br>
-possible combinations for the $x$ position alone. The same reasoning can be applied to the height, which evaluates as<br>
-$n_{x}(height_{feature}) = height_{window} - height_{feature} + 1$<br>
-and<br>
-$N_{y,2h} = n_{y}(1) + n_{y}(2) + n_{y}(3) + ... + n_{y}(24)$<br>
-$=24 + 23 + 22 ... + 1$<br>
-$= 300$<br>
-Consequently, the total number of combinations is<br>
+$N_{x,2h} = 23 + 21 + 19 ... + 1 = 144$<br>
+Similarly, for the height, the number of possible positions $n_{y}(height_{feature}) = 300$<br>
+Consequently, the total number of combinations for positioning the horizontal two-rectangle feature is<br>
 $N_{2h} = $N_{x,2h} \times $N_{y,2h} = 144 \times 300 = 43200$<br>
 
-If we do the same for the other type of Haar features, which leads to over more than 180,000 features being calculated in this window as claimed in the <a href="#ref2">paper</a>. It becomes very computationally expensive to calculate the pixel difference for all the features in order to evaluate the features. To avoid such costly computations the concept of an <b>integral image</b> (also known as a summed-area table) was introduced.
+When summing all these, the total number of valid combinations for the x-coordinate positioning alone is significant. The same logic applies to the other features, yielding many possible combinations. This leads to over 160,000 features being calculated within this window, as claimed in the paper, making the computation of pixel differences for all features extremely expensive.<br>$
+
+To mitigate this computational cost, the concept of an integral image (or summed-area table) was introduced. An integral image provides a fast and straightforward method to calculate the value of any Haar-like feature. Instead of computing the sum at every pixel, it uses sub-rectangles and creates array references for each of these sub-rectangles. These references are then used to compute the Haar features efficiently.
 
 An integral image gives a fast and simple way to calculate the value of any haar-like feature. Instead of computing at every pixel, it instead creates sub-rectangles and creates array references for each of those sub-rectangles. These are then used to compute the Haar features. The value for location (x, y) on the integral image is the sum of the pixels above and to the left of the (x, y) on the original image plus itself.
 
