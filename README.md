@@ -115,7 +115,18 @@ The sum of pixels in the rectangle ABCD can be obtained using values of points A
 However, how do we determine the best features that represent an object from the hundreds of thousands of Haar features? This problem is solved by using <b>AdaBoost</b> (Adaptive Boosting).
 
 <h3 id="ss3">3. AdaBoost learning algorithm</h3>
-AdaBoost is a type of ensemble technique (Boosting) in  Machine Learning which combines a set of weak learners to form a strong learner. Boosting is a sequential process, wherein each subsequent learner attempts to rectify the errors made by the previous learner in the sequence.
+AdaBoost is a type of ensemble technique (Boosting) in Machine Learning that combines a set of <b>weak learners</b> to form a <b>strong learner</b>. Boosting is a sequential process where each subsequent learner attempts to correct the errors made by the previous learner in the sequence.<br>
+In face detection, the terminology 'weak learner' refers to a model can classify a subregion of an image as a face or not-face only slightly better than a random predictor. In Viola-Jones framework, each Haar-like feature corresponds to a weak learner. To decide the type and the size of a feature that goes into the final classifier, AdaBoost checks the performance of all classifiers which are supplied to it.<br>
+
+To compute the performance of classifier, we evaluate it on all subregions of all the images used for training.
+
+Some subregions will produce a strong response in the classifier and will be classified as positives, which means the classifier thinks that it contains a human face.
+
+Subregions which do not produce a strong response are assumed to negatives and classifier thinks that they do not contain a human face.
+
+The classifiers whose performance is better are assigned a higher importance or <b>weight</b>. The final classifier obtained is a strong classifier, also called a <b>boosted classifier</b>, which contains the best performing weak classifiers.
+
+This algorithm is called adaptive because, as the training is progressed, it gives more emphasis to those images which were misclassified. The weak classifiers which perform better on these hard examples are assigned a <u>higher</u> weight when compared to others.
 
 <h2>References</h2>
 <ol>
