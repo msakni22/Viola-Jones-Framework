@@ -79,9 +79,9 @@ $N_{x,2h} = n_{x}(2) + n_{x}(4) + n_{x}(6) + ... + n_{x}(24)$<br>
 $N_{x,2h} = 23 + 21 + 19 ... + 1 = 144$<br>
 Similarly, for the height, the number of possible positions $n_{y}(height_{feature}) = 300$<br>
 Consequently, the total number of combinations for positioning the horizontal two-rectangle feature is<br>
-$N_{2h} = $N_{x,2h} \times $N_{y,2h} = 144 \times 300 = 43200$<br>
+$N_{2h} = N_{x,2h} \times N_{y,2h} = 144 \times 300 = 43200$ <br>
 
-When summing all these, the total number of valid combinations for the x-coordinate positioning alone is significant. The same logic applies to the other features, yielding many possible combinations. This leads to over 160,000 features being calculated within this window, as claimed in the paper, making the computation of pixel differences for all features extremely expensive.<br>$
+When summing all these, the total number of valid combinations for the x-coordinate positioning alone is significant. The same logic applies to the other features, yielding many possible combinations. This leads to over 160,000 features being calculated within this window, as claimed in the paper, making the computation of pixel differences for all features extremely expensive.<br>
 
 To mitigate this computational cost, the concept of an integral image (or summed-area table) was introduced. An integral image provides a fast and straightforward method to calculate the value of any Haar-like feature. Instead of computing the sum at every pixel, it uses sub-rectangles and creates array references for each of these sub-rectangles. These references are then used to compute the Haar features efficiently.
 
