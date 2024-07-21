@@ -79,7 +79,7 @@ This process is repeated across multiple locations and sizes, allowing the detec
 
 The Viola-Jones algorithm calculates many such features across multiple subregions of an image, making the process computationally intensive. To address this, the algorithm employs the concept of <b>Integral Images</b>, which allows for rapid calculation of these features.
 
-<h3>2. Integral image</h3>
+<h3 id="ss2">2. Integral image</h3>
 Consider an image of size 24 × 24 pixels (as used in the original <a href="ref1">paper</a>). For a horizontal two-rectangle feature, there are 12 possible valid widths for a pixel-wide window: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, and 24. Given that the feature height is 1 pixel, there are 24 possible positions for this height without violating symmetry. However, not all positions are valid when considering the feature’s placement.
 <ul>
   <li>A 2-pixel wide feature can be positioned at 23 different coordinates (23 possible positions).</li>
