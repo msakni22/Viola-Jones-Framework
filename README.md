@@ -1,4 +1,4 @@
-# Viola Jones Framework
+# Viola-Jones Framework
 
 <h2>Contents</h2>
 <ul>
@@ -13,7 +13,7 @@
   <li><a href=""></a></li>
 </ul>
 
-<h2 id="s1">Viola Jones Framework</h2>
+<h2 id="s1">Viola-Jones Framework</h2>
 <p>The <b>Viola-Jones Object Detection Framework</b>, developed by <b>Paul Viola</b> and <b>Michael Jones</b> in <a href="#ref1">2001</a>, is an innovative machine learning algorithm specifically designed for fast, accurate face detection. It was primarily motivated by the problem of face detection, although it can be adapted to detect other classes of objects. <br> Training the framework is relatively slow, but it enables objects to be detected quickly and accurately. In fact, it can detect human faces very effectively, and in real time.<br></p>
 
 Viola–Jones is essentially a <b>boosted feature learning algorithm</b> trained by running a modified <b>AdaBoost</b> algorithm on <b>Haar feature classifiers</b> to find a sequence of classifiers <i>f<sub>1</sub>, f<sub>2</sub>, ..., f<sub>n</sub></i>.<br>
