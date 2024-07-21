@@ -106,7 +106,7 @@ For example, from below to calculate the (2,2) = 20: 1+3+12+4 = 20.<br>
 <img src="images/integral.png" height=210px/><br>
 <img src="images/integral1.png" height=350px /><br>
 <img src="images/integral2.png" height=350px /><br>
-The sum of pixels in the rectangle ABCD can be obtained using values of points A, B, C, and D, and this expression D - B - C + A = 113 - 42 - 50 + 20 = 41
+The sum of pixels in the rectangle ABCD can be obtained using values of points A, B, C, and D, and this expression D - B - C + A = 113 - 42 - 50 + 20 = 41 <br>
 
 <b>Note 1</b>: The integral image $I^*$ contains the sum (the discrete integral) of all values top and left of a specific point as follow: $I^* = \sum_{x=0}^i \sum_{y=0}^j I_{i,j}$
 <b>Note 2</b>: what if the position of the box lies between pixels?: use bilinear interpolation.
