@@ -3,7 +3,7 @@
 
 Viola–Jones is essentially a <b>boosted feature learning algorithm</b> trained by running a modified <b>AdaBoost</b> algorithm on <b>Haar feature classifiers</b> to find a sequence of classifiers <i>f<sub>1</sub>, f<sub>2</sub>, ..., f<sub>n</sub></i>.<br>
 
-The framework consists of four main steps which are mainly:<br>
+The framework consists of four main steps which are mainly:
 <ol>
   <li>Selecting Haar-like features</li>
   <li>Creating an Integral image</li>
@@ -11,7 +11,7 @@ The framework consists of four main steps which are mainly:<br>
   <li>Creating classifier cascades</li>
 </ol>
 <h3>1. Selecting Haar-like features</h3>
-Most images contain universally similar patterns recognizable from a human perspective. For example:
+Most images contain universally similar patterns recognizable from a human perspective. For example:<br>
 <ul>
   <li>Human Faces: Common patterns include eyes, nose, cheeks, and mouth.</li>
   <li>Four-Wheeler Vehicles: Recognizable patterns include wheels, doors, and steering wheels.</li>
