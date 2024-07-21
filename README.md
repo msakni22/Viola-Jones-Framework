@@ -38,7 +38,7 @@ For example, human faces share several common attributes, such as the eye region
 A haar-like feature will be represented as a matrix where all white-colored pixels will be represented as 0 and black-colored pixels will be represented as 1.
 By summing the pixel values of different regions and comparing them, the algorithm can effectively identify areas where these attributes hold true.<br>
 
-<img src="images/rectangle.webp" height=300px />
+<img src="images/rectangle.webp" height=200px />
 
 For instance, the sum of pixel values in a darker region will be smaller than in a lighter region, which can be used to detect specific facial features.<br>
 
