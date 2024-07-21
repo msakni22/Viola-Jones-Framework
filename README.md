@@ -86,9 +86,15 @@ and<br>
 $N_{y,2h} = n_{y}(1) + n_{y}(2) + n_{y}(3) + ... + n_{y}(24)$<br>
 $=24 + 23 + 22 ... + 1$<br>
 $= 300$<br>
-Consequently, the total number of combinations is
-$N_{2h} = $N_{x,2h} \times $N_{y,2h} = 144 \times 300 = 43200$
+Consequently, the total number of combinations is<br>
+$N_{2h} = $N_{x,2h} \times $N_{y,2h} = 144 \times 300 = 43200$<br>
 
+If we do the same for the other type of Haar features, which leads to over more than 180,000 features being calculated in this window as claimed in the <a href="#ref2">paper</a>. It becomes very computationally expensive to calculate the pixel difference for all the features in order to evaluate the features. To avoid such costly computations the concept of an <b>integral image</b> (also known as a summed-area table) was introduced.
+
+An integral image gives a fast and simple way to calculate the value of any haar-like feature. Instead of computing at every pixel, it instead creates sub-rectangles and creates array references for each of those sub-rectangles. These are then used to compute the Haar features. The value for location (x, y) on the integral image is the sum of the pixels above and to the left of the (x, y) on the original image plus itself.
+
+For example, from below to calculate the (2,2) = 16: 5+2+3+6 = 16.
+<img src="images/integral.png" />
 
 <h2>References</h2>
 <ol>
