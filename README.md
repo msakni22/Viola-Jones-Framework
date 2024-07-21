@@ -18,8 +18,8 @@ For example:
   <li><b>Four-Wheeler Vehicles</b>: Recognizable patterns include wheels, doors, and steering wheels.</li>
   <li><b>Buildings</b>: Consistent features include doors, windows, and walls.</li>
 </ul>
-The concept of Haar-like features was introduced by Alfred Haar in 1909. He developed the "Haar wavelet," a matrix of rescaled square-shaped functions with values ranging between 0 and 1.
-Haar-like features, named for their resemblance to 2D Haar wavelets, are key components of the Viola-Jones object detection algorithm. These features use simple rectangular patterns to detect structural components of objects, such as edges, lines, and textures. They are applied to various sub-windows of the image to assess the presence of specific patterns crucial for object recognition.<br>
+The concept of <b>Haar-like features</b> was introduced by <b>Alfred Haar</b> in 1909. He developed the "Haar wavelet," a matrix of rescaled square-shaped functions with values ranging between 0 and 1.<br>
+<b>Haar-like features</b>, named for their resemblance to 2D Haar wavelets, use simple rectangular patterns to detect structural components of objects, such as edges, lines, and textures. They are applied to various sub-windows of the image to assess the presence of specific patterns crucial for object recognition.<br>
 
 There are several types of Haar-like features, including:
 <ul>
