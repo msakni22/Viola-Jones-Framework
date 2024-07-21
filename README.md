@@ -73,7 +73,7 @@ However, given that we also have to position the feature, not all positions are 
   <li>A 22 pixel feature can be positioned at $x$ coordinates $0, 1, 2$, resulting in 3 possible combinations.</li>
 </ul>
 This yields<br>
-$n_{x}(width_{feature}) = width_{window} - width_{feature} + 1$<br>
+$n_{x}(width_{feature}) = width_{window} - width_{feature} + 1$ <br>
 possible combinations for a specific $width_{feature}$, giving<br>
 $N_{x,2h} = n_{x}(2) + n_{x}(4) + n_{x}(6) + ... + n_{x}(24)$<br>
 $=23 + 21 + 19 ... + 1$<br>
