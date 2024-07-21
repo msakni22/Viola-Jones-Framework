@@ -60,7 +60,7 @@ Each haar feature type is applied to different locations and sizes within all im
 
 This process is repeated across multiple locations and sizes, allowing the detection of features with varying scales and orientations, which helps in recognizing patterns and structures crucial for object detection.
 
-<img src="images/examples.jfif" height=600px />
+<img src="images/example.png" height=600px />
 
 The Viola-Jones algorithm calculates many such features across multiple subregions of an image, making the process computationally intensive. To address this, the algorithm employs the concept of <b>Integral Images</b>, which allows for rapid calculation of these features.
 
