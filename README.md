@@ -1,4 +1,4 @@
-# Viola-Jones-Framework
+![image](https://github.com/user-attachments/assets/6bdea8bc-f87a-4b9b-9279-641635a5f602)# Viola-Jones-Framework
 <p>The <b>Viola-Jones Object Detection Framework</b>, developed by <b>Paul Viola</b> and <b>Michael Jones</b> in <a href="#ref1">2001</a>, is an innovative machine learning algorithm specifically designed for fast, accurate face detection. It was primarily motivated by the problem of face detection, although it can be adapted to detect other classes of objects. <br> Training the framework is relatively slow, but it enables objects to be detected quickly and accurately. In fact, it can detect human faces very effectively, and in real time.<br></p>
 
 Viola–Jones is essentially a <b>boosted feature learning algorithm</b> trained by running a modified <b>AdaBoost</b> algorithm on <b>Haar feature classifiers</b> to find a sequence of classifiers <i>f<sub>1</sub>, f<sub>2</sub>, ..., f<sub>n</sub></i>.<br>
@@ -81,7 +81,7 @@ Similarly, for the height, the number of possible positions $n_{y}(height_{featu
 Consequently, the total number of combinations for positioning the horizontal two-rectangle feature is<br>
 $N_{2h} = N_{x,2h} \times N_{y,2h} = 144 \times 300 = 43200$ <br>
 
-When summing all these, the total number of valid combinations for the x-coordinate positioning alone is significant. The same logic applies to the other features, yielding many possible combinations. This leads to over 160,000 features being calculated within this window, as claimed in the paper, making the computation of pixel differences for all features extremely expensive.<br>
+When summing all these, the total number of valid combinations for the x-coordinate positioning alone is significant. Considering all possible filter parameters (position, scale, and type), this leads to over 160,000 features being calculated within this window, as claimed in the paper, making the computation of pixel differences for all features extremely expensive.<br>
 
 To mitigate this computational cost, the concept of an integral image (or summed-area table) was introduced. An integral image provides a fast and straightforward method to calculate the value of any Haar-like feature. Instead of computing the sum at every pixel, it uses sub-rectangles and creates array references for each of these sub-rectangles. These references are then used to compute the Haar features efficiently.
 
@@ -89,6 +89,14 @@ An integral image gives a fast and simple way to calculate the value of any haar
 
 For example, from below to calculate the (2,2) = 20: 1+3+12+4 = 20.<br>
 <img src="images/integral.png" height=210px/><br>
+<img src="images/integral1.png" height=350px /><br>
+<img src="images/integral2.png" height=350px /><br>
+The sum of pixels in the rectangle ABCD can be obtained using values of points A, B, C, and D, and this expression D - B - C + A = 113 - 42 - 50 + 20 = 41
+
+<b>Note 1</b>: The integral image $I^*$ contains the sum (the discrete integral) of all values top and left of a specific point as follow: $I^* = \sum_{x=0}^i \sum_{y=0}^j I_{i,j}$
+<b>Note 2</b>: what if the position of the box lies between pixels?: use bilinear interpolation.
+
+However, how do we determine the best features that represent an object from the hundreds of thousands of Haar features? This problem is solved by using <b>AdaBoost</b> (Adaptive Boosting).
 
 <h2>References</h2>
 <ol>
