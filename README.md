@@ -44,6 +44,9 @@ For example, We can see, in the image below, that there is an edge formation nea
 <img src="images/apply_haar.jfif" height=300px />
 
 
+
+The Viola-Jones algorithm calculates many such features across multiple subregions of an image, making the process computationally intensive. To address this, the algorithm employs the concept of Integral Images, which allows for rapid calculation of these features.
+
 <h2>References</h2>
 <ol>
   <li id="ref1">Viola, Paul, and Michael Jones. "Rapid object detection using a boosted cascade of simple features." Proceedings of the 2001 IEEE computer society conference on computer vision and pattern recognition. CVPR 2001. Vol. 1. Ieee, 2001.</li>
