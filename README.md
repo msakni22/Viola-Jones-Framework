@@ -21,7 +21,7 @@ For example:
 The concept of <b>Haar-like features</b> was introduced by <b>Alfred Haar</b> in 1909. He developed the "Haar wavelet," a matrix of rescaled square-shaped functions with values ranging between 0 and 1.<br>
 <b>Haar-like features</b>, named for their resemblance to 2D Haar wavelets, use simple rectangular patterns to detect structural components of objects, such as edges, lines, and textures. They are applied to various sub-windows of the image to assess the presence of specific patterns crucial for object recognition.<br>
 
-There are several types of Haar-like features, including:
+There are several types of Haar-like features (see figure), including:
 <ul>
   <li>Edge features</li>
   <li>Line features</li>
