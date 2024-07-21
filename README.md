@@ -65,6 +65,29 @@ This process is repeated across multiple locations and sizes, allowing the detec
 The Viola-Jones algorithm calculates many such features across multiple subregions of an image, making the process computationally intensive. To address this, the algorithm employs the concept of <b>Integral Images</b>, which allows for rapid calculation of these features.
 
 <h3>2. Integral image</h3>
+Let's assume an image size of 24 × 24 pixels (as used in the <a href="#ref2">paper</a>) a horizontal two-rectangle feature can have the following 12 valid sizes given a pixel wide window: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22 and 24. Since the feature is of height 1, there are 24 possible combinations for the height without violating symmetry. 
+However, given that we also have to position the feature, not all positions are valid:
+<ul>
+  <li>A 2 pixel feature can be positioned at $x$ coordinates $0...22$ , resulting in 23 possible combinations.</li>
+  <li>A 24 pixel feature can be only positioned at $x$ coordinate $0$, resulting in 1 possible combination.</li>
+  <li>A 22 pixel feature can be positioned at $x$ coordinates $0, 1, 2$, resulting in 3 possible combinations.</li>
+</ul>
+This yields<br>
+$n_{x}(width_{feature}) = width_{window} - width_{feature} + 1$<br>
+possible combinations for a specific $width_{feature}$, giving<br>
+$N_{x,2h} = n_{x}(2) + n_{x}(4) + n_{x}(6) + ... + n_{x}(24)$<br>
+$=23 + 21 + 19 ... + 1$<br>
+$= 144$<br>
+possible combinations for the $x$ position alone. The same reasoning can be applied to the height, which evaluates as<br>
+$n_{x}(height_{feature}) = height_{window} - height_{feature} + 1$<br>
+and<br>
+$N_{y,2h} = n_{y}(1) + n_{y}(2) + n_{y}(3) + ... + n_{y}(24)$<br>
+$=24 + 23 + 22 ... + 1$<br>
+$= 300$<br>
+Consequently, the total number of combinations is
+$N_{2h} = $N_{x,2h} \times $N_{y,2h} = 144 \times 300 = 43200$
+
+
 <h2>References</h2>
 <ol>
   <li id="ref1">Viola, Paul, and Michael Jones. "Rapid object detection using a boosted cascade of simple features." Proceedings of the 2001 IEEE computer society conference on computer vision and pattern recognition. CVPR 2001. Vol. 1. Ieee, 2001.</li>
