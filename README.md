@@ -46,7 +46,7 @@ For example, We can see in the image below that there is an edge formation near 
 
 After detecting an object using Haar-like features, it is crucial to evaluate the model to assess its accuracy. The evaluation involves calculating the feature value by subtracting the sum of pixel values in the black region from the sum of pixel values in the white region.
 
-$Feature Value = (\sum Pixel_White_Region - \sum Pixel_Black_Region) / Number_of_Pixel$
+$Feature Value = (\sum Pixel\_White\_Region - \sum Pixel\_Black\_Region) / Number\_of\_Pixel$
 
 
 
