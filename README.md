@@ -2,7 +2,7 @@
 
 <h2>Contents</h2>
 <ul>
-  <li><a href="#s1">Viola Jones Framework</a> (explained)
+  <li><a href="#s1">Viola-Jones Framework</a> (explained)
   <ol>
     <li><a href="#ss1">Haar-like features</a></li>
     <li><a href="#ss2">Integral image</a></li>
